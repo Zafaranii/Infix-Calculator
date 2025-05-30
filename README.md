@@ -1,6 +1,3 @@
-Here's the complete markdown content from the Overview wiki page that you can copy-paste directly into your README:
-
-```markdown
 # Overview
 
 This document provides an overview of the Infix Calculator repository, a single-file C implementation that evaluates arithmetic expressions using stack-based algorithms. The system converts infix notation expressions to postfix notation before performing evaluation, demonstrating fundamental data structure concepts including stack operations and expression parsing.
@@ -159,11 +156,4 @@ When input validation fails, the system prints an error message and recursively 
 **Global State Management:** All data structures and counters are declared as global variables, simplifying function interfaces but requiring careful state management across the processing pipeline.
 
 **Precedence-Driven Conversion:** The `prefered()` function encodes operator precedence rules (parentheses: -1, +/-: 1, */: 2, ^: 3) that drive the infix-to-postfix conversion algorithm.
-```
 
-## Notes
-
-This markdown content is ready to paste directly into your README.md file. The mermaid diagrams will render properly on GitHub, and all the technical documentation provides a comprehensive overview of your calculator's architecture and functionality. You may want to add installation/compilation instructions and usage examples specific to your needs.
-
-Wiki pages you might want to explore:
-- [Overview (Zafaranii/Infix-Calculator)](/wiki/Zafaranii/Infix-Calculator#1)
