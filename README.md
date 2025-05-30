@@ -25,49 +25,6 @@ The Infix Calculator implements a three-phase processing pipeline that transform
 
 The system architecture centers around three primary data structures and a sequential processing pipeline implemented in a single C file.
 
-#### Core Data Structures and Processing Flow
-
-```mermaid
-graph TB
-    subgraph "Input Processing"
-        A["main()"] --> B["gets(inf[100])"]
-        B --> C["chck_brakects()"]
-        B --> D["chck_operators()"]
-    end
-    
-    subgraph "Global Data Arrays"
-        E["stack[256]<br/>Character Stack"] 
-        F["post[100]<br/>Postfix Storage"]
-        G["eval[100]<br/>Float Stack"]
-    end
-    
-    subgraph "Conversion Engine"
-        H["Infix Parser Loop"] --> I["prefered()"]
-        I --> J["push()/pop()"]
-        J --> K["Postfix Builder"]
-    end
-    
-    subgraph "Evaluation Engine"
-        L["evaluate()"] --> M["pushev()/popev()"]
-        M --> N["Arithmetic Operations"]
-    end
-    
-    A --> H
-    C --> H
-    D --> H
-    H --> E
-    K --> F
-    F --> L
-    L --> G
-    N --> O["printf(\"%.4f\")"]
-    
-    style A fill:#f9f9f9
-    style L fill:#f9f9f9
-    style E fill:#f5f5f5
-    style F fill:#f5f5f5
-    style G fill:#f5f5f5
-```
-
 ## Code Entity Mapping
 
 The following diagram maps the system's conceptual components to their actual implementation in the codebase:
